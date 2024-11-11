@@ -1,0 +1,44 @@
+{
+  "platform-version": "2.3",
+  "product": {
+    "freshdesk": {
+      "location": {
+        "ticket_sidebar": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"   
+        }
+      },
+      "requests": {
+        "getFreshdeskContact": {
+          "schema": {
+            "method": "GET",
+            "host": "<%= iparam.freshdesk_subdomain %>.freshdesk.com",
+            "path": "/api/v2/tickets/<%= context.ticketId %>?include=requester",
+            "headers": {
+              "Authorization": "Basic <%= encode(iparam.freshdesk_api_key) %>",
+              "Content-Type": "application/json"
+            }
+          }
+        },
+        "getUpsalesContact": {
+          "schema": {
+            "method": "GET",
+            "host": "integration.upsales.com",
+            "path": "/api/v2/contacts",
+            "headers": {
+              "Authorization": "Bearer <%= iparam.upsales_api_key %>",
+              "Content-Type": "application/json"
+            },
+            "query": {
+              "email": "eq:<%= context.email %>"
+            }
+          }
+        }
+      }
+    }
+  },
+  "engines": {
+    "node": "18.20.4",
+    "fdk": "9.2.0"
+  }
+}

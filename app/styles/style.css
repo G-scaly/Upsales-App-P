@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  overflow: hidden; /* Prevent body from scrolling */
+}
+
+/* Full container styling */
+.full-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #36687A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrolling at container level */
+}
+
+/* Scrollable content inside container */
+.fw-widget-wrapper {
+  background-color: #36687A;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  height: 90vh; /* Adjust this so there's room for scrolling */
+  color: #FFFFFF;
+  box-sizing: border-box;
+  text-align: center;
+  overflow-y: auto; /* Enable vertical scrolling inside the content */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Headings */
+h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+/* Contact Information */
+#upsalesContactInfo {
+  background-color: #497A8A;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #FFFFFF;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Use full width */
+  height: auto; /* Allow for content height */
+}
+
+/* Contact Row Styles */
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow the row to wrap content if needed */
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  color: #FFFFFF;
+  overflow-wrap: break-word; /* Break long words or URLs */
+  word-wrap: break-word; /* Additional compatibility */
+}
+
+/* Remove border for the last row */
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+/* Label and Data Styles */
+.contact-label {
+  font-weight: bold;
+  color: #FFFFFF;
+  max-width: 40%; /* Ensure labels stay within 40% of the width */
+  white-space: nowrap; /* Keep labels from wrapping */
+  flex-shrink: 0; /* Prevent shrinking of the label */
+}
+
+/* Data Styles------------------------ */
+.contact-data {
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 100%; /* Ensure enough space for data */
+  overflow-wrap: break-word; /* Allow long text to wrap within the available width */
+  word-wrap: break-word;
+  white-space: break-word; /* Allow text to wrap normally */
+  overflow-wrap: break-word; /* Break long words or URLs */
+}
+
+
+
+/* Notifications Banner */
+#newTicketBanner {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+/* Placeholder Text */
+#apptext {
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
